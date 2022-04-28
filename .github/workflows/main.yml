@@ -1,4 +1,4 @@
-name: Attach bin to release
+name: binar
 
 on:
   release:
