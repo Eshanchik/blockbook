@@ -11,5 +11,5 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
-         file: blockbook/Dockergile
+         file: blockbook/Dockerfile
     
