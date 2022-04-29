@@ -6,8 +6,6 @@ on:
 jobs:
   build-blockbook:
     runs-on: ubuntu-latest
-    container: 
-        image: debian:buster
 
     name: Build and upload blockbook to release assets
     steps:
