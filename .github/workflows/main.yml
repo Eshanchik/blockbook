@@ -35,8 +35,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: awx/awx-ee/context
-          file: awx/awx-ee/context/Dockerfile
+          file: blockbook/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
