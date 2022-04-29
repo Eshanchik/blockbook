@@ -1,4 +1,4 @@
-name: binar
+name: Attach bin to release
 
 on:
   push:
@@ -10,19 +10,19 @@ jobs:
         image: debian:buster
         env: 
           DEBIAN_FRONTEND: noninteractive
-
+          
     name: Build and upload mev-geth to release assets
     steps:
       - name: Pull source
         uses: actions/checkout@v1
 
-      - name: install dependecies
-        run: apt update; apt-get install -y \ build-essential git wget pkg-config libzmq3-dev libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev  
-
       - name: Install Go
         uses: actions/setup-go@v2
         with:
-          go-version: 1.14.2  
-
-      - name: build
-        run: go build all-Ethereum
+          go-version: 1.14.2
+      
+      - name: Install make
+        run: apt update; apt-get install -yq build-essential zip ca-certificates
+      
+      - name: build blockbook
+        run: make 
