@@ -2,7 +2,7 @@ FROM golang:1.14.2-buster
 
 RUN apt-get update && apt-get install -y \
     build-essential git wget pkg-config libzmq3-dev \
-    libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev \
+    libgflags-dev libsnappy-dev zlib1g-dev libbz2-dev liblz4-dev libtool \
     && rm -rf /var/lib/apt/lists/* \
     && git clone https://github.com/facebook/rocksdb.git \
     && cd rocksdb \
