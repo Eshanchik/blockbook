@@ -4,14 +4,14 @@ on:
   push:
 
 jobs:
-  build-mev-geth-bin:
+  build-blockbook:
     runs-on: ubuntu-latest
     container: 
         image: debian:buster
         env: 
           DEBIAN_FRONTEND: noninteractive
           
-    name: Build and upload mev-geth to release assets
+    name: Build and upload blockbook to release assets
     steps:
       - name: Pull source
         uses: actions/checkout@v1
