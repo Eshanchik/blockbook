@@ -25,4 +25,4 @@ jobs:
         run: apt update; apt-get install -yq build-essential zip ca-certificates
       
       - name: build blockbook
-        run: make 
+        run: make blockbook
