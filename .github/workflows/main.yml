@@ -8,8 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     container: 
         image: debian:buster
-        env: 
-          DEBIAN_FRONTEND: noninteractive
 
     name: Build and upload blockbook to release assets
     steps:
@@ -25,4 +23,4 @@ jobs:
         run: apt update; apt-get install -yq build-essential zip ca-certificates
 
       - name: build blockbook
-        run: go build all-ethereum
+        run: make all-ethereum
