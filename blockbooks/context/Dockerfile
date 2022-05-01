@@ -19,6 +19,6 @@ RUN git clone https://github.com/zeromq/libzmq \
     && make \
     && make install
 
-RUN git clone https://github.com/Eshanchik/blockbook.git \
+RUN git clone https://github.com/ambrosus/blockbook.git \
     && cd blockbook \
     && go build
