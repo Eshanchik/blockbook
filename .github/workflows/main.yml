@@ -1,4 +1,4 @@
-name: Create and publish a AWX EE custom image
+name: Create and publish a BLOCKBOOK custom image
 
 on:
   push:
