@@ -2,6 +2,8 @@ name: Create and publish a AWX EE custom image
 
 on:
   push:
+    paths:
+    - 'blockbook/**'
 
 env:
   REGISTRY: ghcr.io
